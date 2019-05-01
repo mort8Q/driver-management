@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit Driver Page</h1>
+    <form action="/drivers/<%= driver._id%>?_method=put" method="POST">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" value="<%= driver.name%>" /><br>
+      <label for="logo">Logo</label>
+      <input type="text" name="image" id="image" value="<%= driver.image %>" /><br>
+      <label for="age">age</label>
+      <input type="text" name="age" id="age" value="<%= driver.age%>" /><br>
+      <input type="submit" value="Edit Company">
+    </form>
+  </body>
+</html>

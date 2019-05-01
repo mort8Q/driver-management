@@ -1,0 +1,25 @@
+<html>
+  <head>
+    
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body> 
+    <h1>Drivers</h1>
+    <nav>
+      <a href="/companies/new">Add a new driver</a>
+    </nav>
+    
+    <ul>
+    <% for (i in drivers) { %>
+      <li>
+        <%= drivers[i].name %>, 
+      </li>
+      <a href="/drivers/<%= drivers[i]._id  %>">SHOW</a>
+      <a href="/drivers/<%= drivers[i]._id  %>/edit">EDIT</a>
+      <form action="/drivers/<%= drivers[i]._id  %>?_method=DELETE" method="POST">
+        <input type="submit" value="DELETE"/>
+      </form>
+      <% } %>
+    </ul>
+    </body>
+</html>
